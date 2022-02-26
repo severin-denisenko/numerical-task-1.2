@@ -105,12 +105,39 @@ int main(){
 
     fprintf(C, "# %d", n);
 
-    for (int i = 0; i < 5 * n - 6; ++i) {
-        if (i == 0 || i == 3 || i == 7 || i == 5 * n - 9 || i == 5 * n - 13){
-            fprintf(C, "\n");
-        }
-        fprintf(C, "%lf ", matrix_C[i]);
+    fprintf(C, "\n");
+
+    fprintf(C, "%lf ", matrix_C[0]);
+    fprintf(C, "%lf ", matrix_C[1]);
+    fprintf(C, "%lf ", matrix_C[2]);
+
+    fprintf(C, "\n");
+
+    fprintf(C, "%lf ", matrix_C[3]);
+    fprintf(C, "%lf ", matrix_C[4]);
+    fprintf(C, "%lf ", matrix_C[5]);
+    fprintf(C, "%lf ", matrix_C[6]);
+
+    fprintf(C, "\n");
+
+    for (int i = 3; i < n - 1; ++i) {
+        double *c = matrix_C + 5*i;
+
+        fprintf(C, "%lf %lf %lf %lf %lf ", c[-8], c[-7], c[-6], c[-5], c[-4]);
+        fprintf(C, "\n");
     }
+
+    fprintf(C, "%lf ", matrix_C[5 * n - 13]);
+    fprintf(C, "%lf ", matrix_C[5 * n - 12]);
+    fprintf(C, "%lf ", matrix_C[5 * n - 11]);
+    fprintf(C, "%lf ", matrix_C[5 * n - 10]);
+
+    fprintf(C, "\n");
+
+    fprintf(C, "%lf ", matrix_C[5 * n - 9]);
+    fprintf(C, "%lf ", matrix_C[5 * n - 8]);
+    fprintf(C, "%lf ", matrix_C[5 * n - 7]);
+
 
     fclose(A);
     fclose(B);
