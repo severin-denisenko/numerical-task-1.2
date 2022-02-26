@@ -94,7 +94,7 @@ int main(){
     /// Multiplying ///
     ///////////////////
 
-    if(diagonal_3_multiply(matrix_A, matrix_B, matrix_C, n) == 1){
+    if(optimised_diagonal_3_multiply(matrix_A, matrix_B, matrix_C, n) == 1){
         printf("Error occur during multiplication. Exiting...");
         exit(1);
     }
