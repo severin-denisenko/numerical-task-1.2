@@ -58,6 +58,10 @@ int main(){
         n = n_a;
     }
 
+    if (n < 5) {
+        printf("Error: matrices are too small");
+    }
+
     // Allocating memory for matrices
 
     double *matrix_A = malloc(sizeof(double) * (n * 3 - 2));
@@ -102,7 +106,7 @@ int main(){
     fprintf(C, "# %d", n);
 
     for (int i = 0; i < 5 * n - 6; ++i) {
-        if (i == 0 || i == 3 || i == 7 || i == 5 * n - 8 || i == 5 * n - 12){
+        if (i == 0 || i == 3 || i == 7 || i == 5 * n - 9 || i == 5 * n - 13){
             fprintf(C, "\n");
         }
         fprintf(C, "%lf ", matrix_C[i]);
